@@ -1,0 +1,14 @@
+name: Keep Bot Alive
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Setiap 5 menit
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Ping Bot
+      run: |
+        curl https://6ce0a15f-7663-4e00-921b-8fa60d85a58c-00-18g0phs09aa2u.riker.replit.dev/
